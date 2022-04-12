@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>ㅍㄻㄷ</span>
+    <input type="text" id="floor">
+    <button id="output">ㅍㄹㅁㄷ!1</button>
+    <h1 id="result"></h1>
+
+    <script>
+        let output=document.querySelector('#output')
+        output.addEventListener('click', function()
+        {
+            let floor=document.querySelector('#floor').value
+            floor = Number(floor)
+            let pyramid=""
+            for(let i=1; i<=floor; i++){
+                for(let j = floor; j>i; j--)
+                    pyramid+="\u00a0"
+                for(let j =0; j<2*i-1; j++)
+                    pyramid+="*"
+                pyramid+="\n"
+            }
+            console.log(pyramid)
+            let h1 = document.querySelector('#result')
+            h1.innertext=pyramid
+        })
+
+
+    </script>
+
+    <script>
+        let a = "에이"
+        a=1
+        a=function(){
+            alert("da")
+        }
+        a()
+        a=[1,2,3,"배열",function(){alert("asd")},["a"]]
+        a[4]
+        console.log(a)
+        console.log(a[4])
+
+    </script>
+</body>
+</html>

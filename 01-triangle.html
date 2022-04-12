@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "result"></h1>
+   
+   <script>
+        let input =""
+        let floor = prompt("몇층")
+
+        for(let i=1; i<=floor; i++)
+        {
+            for(let j=0; j<i; j++)
+                input +="*"
+            
+            input += "\n"
+        }
+        console.log(input)
+        let result = document.querySelector("#result")
+        result.innerText = input
+        result.innerHTML += ""
+
+        let myp = document.createElement('p') //p태그를 코드상에서 만들기
+        myp.innerText = "박재형 어쩌고"
+        myp.style.color ="blue"
+        myp.style.background="black"
+        document.body.appendChild(myp)// 바디에 추가하기
+
+    </script>
+
+</body>
+</html>
